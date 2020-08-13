@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ToDoApplication.Models;
 
 namespace ToDoApplication.Data
 {
@@ -14,7 +15,7 @@ namespace ToDoApplication.Data
             : base(options)
         {
         }
-        public DbSet<TodoItem> Items { get; set; }
+        public DbSet<ToDoItem> Items { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
